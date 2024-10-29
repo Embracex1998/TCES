@@ -13,12 +13,12 @@
 
 
 ```
-
 pip install -r requirements.txt
 ```
 
 ### 文件说明
 
+    csvjudge.py:大模型评分脚本.
     testbasepro.txt：包含项目运行的测试命令。
     testbasepro.py：用于生成续写内容的 CSV 文件。
     llmbaseapi.py：用于执行 base 模型的续写测试。
@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ### 使用说明
 
 #### 运行续写内容生成
-    使用 testbasepro.py 自动生成续写内容的 CSV 文件，运行命令如下：
+使用 testbasepro.py 自动生成续写内容的 CSV 文件，运行命令如下：
 
 ```
 python testbasepro.py
@@ -45,7 +45,11 @@ python llmbaseapi.py
 ```
 python llmchatapi.py
 ```
-
+#### 使用大模型对回复内容进行打分
+运行：
+```
+python csvjudge.py
+```
 
 ### 项目结构
 
@@ -53,6 +57,7 @@ python llmchatapi.py
 ```
 .
 ├── requirements.txt       # 项目依赖文件
+├── csvjudge.py            # 大模型评分脚本
 ├── testbasepro.txt        # 测试命令文件
 ├── testbasepro.py         # 生成续写内容的脚本
 ├── llmbaseapi.py          # Base模型续写测试脚本
