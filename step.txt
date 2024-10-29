@@ -1,0 +1,24 @@
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True vllm serve glm-4-9b-chat  --trust_remote_code --gpu-memory-utilization 0.9999
+
+
+
+~/LLaMA-Factory/saves/glm-4-9b/lora/pretrain
+
+model_name_or_path: /root/autodl-tmp/glm-4-9b
+adapter_name_or_path: saves/glm-4-9b/lora/pretrain
+template: glm4
+finetuning_type: lora
+
+autodl-tmp/glm-4-9b
+
+
+
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True vllm serve /mnt/af0931a4-88fe-4e4d-86ed-54f4a275dad4/gutai/vllm_test/glm-4-9b-chat \
+    --enable-lora \
+    --lora-modules  falv=/mnt/af0931a4-88fe-4e4d-86ed-54f4a275dad4/gutai/vllm_test/pretrain \
+    --trust_remote_code \
+    --gpu-memory-utilization 0.8 \
+    --max-model-len 4096 \
+    --enforce-eager \
+    --max_num_seqs=4  
+

@@ -1,0 +1,29 @@
+使用示例
+
+假设您的JSON文件名为input.json，API密钥为your_api_key，两个模型分别为model_a和model_b。
+
+
+全部测试
+
+bash
+
+python testbasepro.py --json_file input.json --mode all --model1 model_a --model2 model_b --api_key your_api_key
+
+随机抽取5条数据测试
+
+bash
+
+python testbasepro.py --json_file input.json --mode random --num_samples 5 --model1 model_a --model2 model_b --api_key your_api_key
+
+选择前10条数据测试
+
+bash
+
+python testbasepro.py --json_file input.json --mode first --num_samples 10 --model1 model_a --model2 model_b --api_key your_api_key
+
+CSV文件格式
+
+
+
+
+python testbasepro.py --json_file pretrain_data.json --mode random --num_samples 5 --model1 falv --model2 /mnt/af0931a4-88fe-4e4d-86ed-54f4a275dad4/gutai/vllm_test/glm-4-9b-chat --api_key your_api_key
